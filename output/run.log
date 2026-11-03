@@ -1,0 +1,100 @@
+2026-11-03 15:11:12,169 INFO JE-001 received {'index': 0}
+2026-11-03 15:11:12,171 INFO JE-001 check {'check': 'required_fields', 'status': 'PASS', 'message': 'All header fields present.'}
+2026-11-03 15:11:12,171 INFO JE-001 check {'check': 'period', 'status': 'PASS', 'message': 'Date 2024-12-31 is within 2024-Q4.'}
+2026-11-03 15:11:12,171 INFO JE-001 check {'check': 'amounts', 'status': 'PASS', 'message': 'All line amounts are valid positive numbers.'}
+2026-11-03 15:11:12,171 INFO JE-001 check {'check': 'balance', 'status': 'PASS', 'message': 'Debits equal credits (850,000.00).'}
+2026-11-03 15:11:12,171 INFO JE-001 check {'check': 'circular', 'status': 'PASS', 'message': 'No account is both debited and credited.'}
+2026-11-03 15:11:12,171 INFO JE-001 check {'check': 'accounts', 'status': 'PASS', 'message': 'All accounts exist, are postable and fully mapped.'}
+2026-11-03 15:11:12,171 INFO JE-001 check {'check': 'fx', 'status': 'PASS', 'message': 'No FX translation or revaluation required.'}
+2026-11-03 15:11:12,171 INFO JE-001 check {'check': 'duplicate', 'status': 'PASS', 'message': 'Not a duplicate.'}
+2026-11-03 15:11:12,171 INFO JE-001 decision {'decision': 'ACCEPT', 'explanation': 'Accepted: all mandatory validations passed.'}
+2026-11-03 15:11:12,171 INFO JE-002 received {'index': 1}
+2026-11-03 15:11:12,171 INFO JE-002 check {'check': 'required_fields', 'status': 'PASS', 'message': 'All header fields present.'}
+2026-11-03 15:11:12,171 INFO JE-002 check {'check': 'period', 'status': 'PASS', 'message': 'Date 2024-12-28 is within 2024-Q4.'}
+2026-11-03 15:11:12,171 INFO JE-002 check {'check': 'amounts', 'status': 'PASS', 'message': 'All line amounts are valid positive numbers.'}
+2026-11-03 15:11:12,171 INFO JE-002 check {'check': 'balance', 'status': 'REJECT', 'message': 'Debits (28,500.00) do not equal credits (25,000.00); difference 3,500.00. Correct the amounts so total debits equal total credits.'}
+2026-11-03 15:11:12,171 INFO JE-002 check {'check': 'circular', 'status': 'PASS', 'message': 'No account is both debited and credited.'}
+2026-11-03 15:11:12,171 INFO JE-002 check {'check': 'accounts', 'status': 'PASS', 'message': 'All accounts exist, are postable and fully mapped.'}
+2026-11-03 15:11:12,171 INFO JE-002 check {'check': 'fx', 'status': 'PASS', 'message': 'No FX translation or revaluation required.'}
+2026-11-03 15:11:12,171 INFO JE-002 check {'check': 'duplicate', 'status': 'PASS', 'message': 'Not a duplicate.'}
+2026-11-03 15:11:12,171 INFO JE-002 decision {'decision': 'REJECT', 'explanation': 'Rejected: Debits (28,500.00) do not equal credits (25,000.00); difference 3,500.00. Correct the amounts so total debits equal total credits.'}
+2026-11-03 15:11:12,171 INFO JE-003 received {'index': 2}
+2026-11-03 15:11:12,171 INFO JE-003 check {'check': 'required_fields', 'status': 'PASS', 'message': 'All header fields present.'}
+2026-11-03 15:11:12,172 INFO JE-003 check {'check': 'period', 'status': 'PASS', 'message': 'Date 2024-12-31 is within 2024-Q4.'}
+2026-11-03 15:11:12,172 INFO JE-003 check {'check': 'amounts', 'status': 'PASS', 'message': 'All line amounts are valid positive numbers.'}
+2026-11-03 15:11:12,172 INFO JE-003 check {'check': 'balance', 'status': 'PASS', 'message': 'Debits equal credits (11,200.00).'}
+2026-11-03 15:11:12,172 INFO JE-003 check {'check': 'circular', 'status': 'PASS', 'message': 'No account is both debited and credited.'}
+2026-11-03 15:11:12,172 INFO JE-003 check {'check': 'accounts', 'status': 'PASS', 'message': 'All accounts exist, are postable and fully mapped.'}
+2026-11-03 15:11:12,172 INFO JE-003 check {'check': 'fx_revaluation', 'status': 'QUARANTINE', 'message': "Entry posts to FX gain/loss account(s) ['7310']; the amount cannot be reproduced from the supplied inputs, so a person must verify the revaluation. Note: no period_end rate is available for ['GBP']."}
+2026-11-03 15:11:12,172 INFO JE-003 check {'check': 'duplicate', 'status': 'PASS', 'message': 'Not a duplicate.'}
+2026-11-03 15:11:12,172 INFO JE-003 decision {'decision': 'QUARANTINE', 'explanation': "Sent to human review: Entry posts to FX gain/loss account(s) ['7310']; the amount cannot be reproduced from the supplied inputs, so a person must verify the revaluation. Note: no period_end rate is available for ['GBP']."}
+2026-11-03 15:11:12,172 INFO JE-004 received {'index': 3}
+2026-11-03 15:11:12,172 INFO JE-004 check {'check': 'required_fields', 'status': 'PASS', 'message': 'All header fields present.'}
+2026-11-03 15:11:12,172 INFO JE-004 check {'check': 'period', 'status': 'PASS', 'message': 'Date 2024-12-31 is within 2024-Q4.'}
+2026-11-03 15:11:12,172 INFO JE-004 check {'check': 'amounts', 'status': 'PASS', 'message': 'All line amounts are valid positive numbers.'}
+2026-11-03 15:11:12,172 INFO JE-004 check {'check': 'balance', 'status': 'PASS', 'message': 'Debits equal credits (45,000.00).'}
+2026-11-03 15:11:12,172 INFO JE-004 check {'check': 'circular', 'status': 'PASS', 'message': 'No account is both debited and credited.'}
+2026-11-03 15:11:12,172 INFO JE-004 check {'check': 'accounts', 'status': 'PASS', 'message': 'All accounts exist, are postable and fully mapped.'}
+2026-11-03 15:11:12,172 INFO JE-004 check {'check': 'fx', 'status': 'PASS', 'message': 'No FX translation or revaluation required.'}
+2026-11-03 15:11:12,172 INFO JE-004 check {'check': 'duplicate', 'status': 'PASS', 'message': 'Not a duplicate.'}
+2026-11-03 15:11:12,172 INFO JE-004 decision {'decision': 'ACCEPT', 'explanation': 'Accepted: all mandatory validations passed.'}
+2026-11-03 15:11:12,172 INFO JE-005 received {'index': 4}
+2026-11-03 15:11:12,172 INFO JE-005 check {'check': 'required_fields', 'status': 'PASS', 'message': 'All header fields present.'}
+2026-11-03 15:11:12,172 INFO JE-005 check {'check': 'period', 'status': 'PASS', 'message': 'Date 2024-12-15 is within 2024-Q4.'}
+2026-11-03 15:11:12,172 INFO JE-005 check {'check': 'amounts', 'status': 'PASS', 'message': 'All line amounts are valid positive numbers.'}
+2026-11-03 15:11:12,172 INFO JE-005 check {'check': 'balance', 'status': 'PASS', 'message': 'Debits equal credits (18,500.00).'}
+2026-11-03 15:11:12,172 INFO JE-005 check {'check': 'circular', 'status': 'PASS', 'message': 'No account is both debited and credited.'}
+2026-11-03 15:11:12,172 INFO JE-005 check {'check': 'account_exists', 'status': 'REJECT', 'message': "Account(s) ['6315'] are not in the chart of accounts. Map to a valid account (or add it to the COA) and resubmit."}
+2026-11-03 15:11:12,172 INFO JE-005 check {'check': 'fx', 'status': 'PASS', 'message': 'No FX translation or revaluation required.'}
+2026-11-03 15:11:12,172 INFO JE-005 check {'check': 'duplicate', 'status': 'PASS', 'message': 'Not a duplicate.'}
+2026-11-03 15:11:12,172 INFO JE-005 decision {'decision': 'REJECT', 'explanation': "Rejected: Account(s) ['6315'] are not in the chart of accounts. Map to a valid account (or add it to the COA) and resubmit."}
+2026-11-03 15:11:12,172 INFO JE-006 received {'index': 5}
+2026-11-03 15:11:12,173 INFO JE-006 check {'check': 'required_fields', 'status': 'PASS', 'message': 'All header fields present.'}
+2026-11-03 15:11:12,173 INFO JE-006 check {'check': 'period', 'status': 'PASS', 'message': 'Date 2024-12-31 is within 2024-Q4.'}
+2026-11-03 15:11:12,173 INFO JE-006 check {'check': 'amounts', 'status': 'PASS', 'message': 'All line amounts are valid positive numbers.'}
+2026-11-03 15:11:12,173 INFO JE-006 check {'check': 'balance', 'status': 'PASS', 'message': 'Debits equal credits (215,000.00).'}
+2026-11-03 15:11:12,173 INFO JE-006 check {'check': 'circular', 'status': 'PASS', 'message': 'No account is both debited and credited.'}
+2026-11-03 15:11:12,173 INFO JE-006 check {'check': 'accounts', 'status': 'PASS', 'message': 'All accounts exist, are postable and fully mapped.'}
+2026-11-03 15:11:12,173 INFO JE-006 check {'check': 'fx', 'status': 'PASS', 'message': 'No FX translation or revaluation required.'}
+2026-11-03 15:11:12,173 INFO JE-006 check {'check': 'duplicate', 'status': 'PASS', 'message': 'Not a duplicate.'}
+2026-11-03 15:11:12,173 INFO JE-006 decision {'decision': 'ACCEPT', 'explanation': 'Accepted: all mandatory validations passed.'}
+2026-11-03 15:11:12,173 INFO JE-007 received {'index': 6}
+2026-11-03 15:11:12,173 INFO JE-007 check {'check': 'required_fields', 'status': 'PASS', 'message': 'All header fields present.'}
+2026-11-03 15:11:12,173 INFO JE-007 check {'check': 'period', 'status': 'PASS', 'message': 'Date 2024-12-31 is within 2024-Q4.'}
+2026-11-03 15:11:12,173 INFO JE-007 check {'check': 'amounts', 'status': 'PASS', 'message': 'All line amounts are valid positive numbers.'}
+2026-11-03 15:11:12,173 INFO JE-007 check {'check': 'balance', 'status': 'PASS', 'message': 'Debits equal credits (38,000.00).'}
+2026-11-03 15:11:12,173 INFO JE-007 check {'check': 'circular', 'status': 'PASS', 'message': 'No account is both debited and credited.'}
+2026-11-03 15:11:12,173 INFO JE-007 check {'check': 'accounts', 'status': 'PASS', 'message': 'All accounts exist, are postable and fully mapped.'}
+2026-11-03 15:11:12,173 INFO JE-007 check {'check': 'fx', 'status': 'PASS', 'message': 'No FX translation or revaluation required.'}
+2026-11-03 15:11:12,173 INFO JE-007 check {'check': 'duplicate', 'status': 'PASS', 'message': 'Not a duplicate.'}
+2026-11-03 15:11:12,173 INFO JE-007 decision {'decision': 'ACCEPT', 'explanation': 'Accepted: all mandatory validations passed.'}
+2026-11-03 15:11:12,173 INFO JE-008 received {'index': 7}
+2026-11-03 15:11:12,173 INFO JE-008 check {'check': 'required_fields', 'status': 'PASS', 'message': 'All header fields present.'}
+2026-11-03 15:11:12,173 INFO JE-008 check {'check': 'period', 'status': 'PASS', 'message': 'Date 2024-12-30 is within 2024-Q4.'}
+2026-11-03 15:11:12,173 INFO JE-008 check {'check': 'amounts', 'status': 'PASS', 'message': 'All line amounts are valid positive numbers.'}
+2026-11-03 15:11:12,173 INFO JE-008 check {'check': 'balance', 'status': 'PASS', 'message': 'Debits equal credits (320,000.00).'}
+2026-11-03 15:11:12,173 INFO JE-008 check {'check': 'circular', 'status': 'REJECT', 'message': "Account(s) ['2170'] appear on both the debit and credit side; the entry nets to zero effect on them (circular/self-offsetting)."}
+2026-11-03 15:11:12,173 INFO JE-008 check {'check': 'account_mapping', 'status': 'QUARANTINE', 'message': "Account(s) ['2170 (Intercompany Payable)'] have an unresolved cash-flow category ('TBD') in the COA; a human must confirm the classification."}
+2026-11-03 15:11:12,173 INFO JE-008 check {'check': 'fx', 'status': 'PASS', 'message': 'No FX translation or revaluation required.'}
+2026-11-03 15:11:12,173 INFO JE-008 check {'check': 'duplicate', 'status': 'PASS', 'message': 'Not a duplicate.'}
+2026-11-03 15:11:12,173 INFO JE-008 decision {'decision': 'REJECT', 'explanation': "Rejected: Account(s) ['2170'] appear on both the debit and credit side; the entry nets to zero effect on them (circular/self-offsetting). Additionally needs review: Account(s) ['2170 (Intercompany Payable)'] have an unresolved cash-flow category ('TBD') in the COA; a human must confirm the classification."}
+2026-11-03 15:11:12,173 INFO JE-009 received {'index': 8}
+2026-11-03 15:11:12,174 INFO JE-009 check {'check': 'required_fields', 'status': 'PASS', 'message': 'All header fields present.'}
+2026-11-03 15:11:12,174 INFO JE-009 check {'check': 'period', 'status': 'PASS', 'message': 'Date 2024-12-31 is within 2024-Q4.'}
+2026-11-03 15:11:12,174 INFO JE-009 check {'check': 'amounts', 'status': 'PASS', 'message': 'All line amounts are valid positive numbers.'}
+2026-11-03 15:11:12,174 INFO JE-009 check {'check': 'balance', 'status': 'PASS', 'message': 'Debits equal credits (75,000.00).'}
+2026-11-03 15:11:12,174 INFO JE-009 check {'check': 'circular', 'status': 'PASS', 'message': 'No account is both debited and credited.'}
+2026-11-03 15:11:12,174 INFO JE-009 check {'check': 'accounts', 'status': 'PASS', 'message': 'All accounts exist, are postable and fully mapped.'}
+2026-11-03 15:11:12,174 INFO JE-009 check {'check': 'fx', 'status': 'PASS', 'message': 'No FX translation or revaluation required.'}
+2026-11-03 15:11:12,174 INFO JE-009 check {'check': 'duplicate', 'status': 'PASS', 'message': 'Not a duplicate.'}
+2026-11-03 15:11:12,174 INFO JE-009 decision {'decision': 'ACCEPT', 'explanation': 'Accepted: all mandatory validations passed.'}
+2026-11-03 15:11:12,174 INFO JE-010 received {'index': 9}
+2026-11-03 15:11:12,174 INFO JE-010 check {'check': 'required_fields', 'status': 'PASS', 'message': 'All header fields present.'}
+2026-11-03 15:11:12,174 INFO JE-010 check {'check': 'period', 'status': 'PASS', 'message': 'Date 2024-12-31 is within 2024-Q4.'}
+2026-11-03 15:11:12,174 INFO JE-010 check {'check': 'amounts', 'status': 'PASS', 'message': 'All line amounts are valid positive numbers.'}
+2026-11-03 15:11:12,174 INFO JE-010 check {'check': 'balance', 'status': 'PASS', 'message': 'Debits equal credits (200,000.00).'}
+2026-11-03 15:11:12,174 INFO JE-010 check {'check': 'circular', 'status': 'PASS', 'message': 'No account is both debited and credited.'}
+2026-11-03 15:11:12,174 INFO JE-010 check {'check': 'accounts', 'status': 'PASS', 'message': 'All accounts exist, are postable and fully mapped.'}
+2026-11-03 15:11:12,174 INFO JE-010 check {'check': 'fx', 'status': 'PASS', 'message': 'No FX translation or revaluation required.'}
+2026-11-03 15:11:12,174 INFO JE-010 check {'check': 'duplicate', 'status': 'PASS', 'message': 'Not a duplicate.'}
+2026-11-03 15:11:12,174 INFO JE-010 decision {'decision': 'ACCEPT', 'explanation': 'Accepted: all mandatory validations passed.'}

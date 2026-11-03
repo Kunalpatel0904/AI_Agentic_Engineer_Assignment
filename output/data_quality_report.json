@@ -1,0 +1,24 @@
+{
+  "trial_balance_orphan_accounts": [
+    "9999"
+  ],
+  "trial_balance_duplicate_account_currency_rows": [
+    "6310/USD"
+  ],
+  "trial_balance_raw_debit_minus_credit": -4800.0,
+  "prior_period_tb_orphan_accounts": [
+    "6905"
+  ],
+  "prior_period_tb_duplicate_account_currency_rows": [],
+  "prior_period_tb_raw_debit_minus_credit": 2832800.0,
+  "currencies_missing_period_end_rate": [
+    "GBP"
+  ],
+  "coa_ambiguous_cash_flow_category": [
+    "1150",
+    "2170"
+  ],
+  "coa_header_nodes_without_children": [
+    "1290"
+  ]
+}

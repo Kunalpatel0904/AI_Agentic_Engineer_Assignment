@@ -1,0 +1,16 @@
+REFLECTION
+
+What I would build with 3 months instead of ~8 hours
+The full pipeline: a COA mapper with confidence scores and a review queue, a statement builder (BS, P&L, cash flow, SOCIE) with a verifier that re-derives totals independently, and a reconciliation agent that explains every delta between pre- and post-adjustment TBs. I would add persistence (a database with immutable posted entries and a review/approval workflow), multi-entity consolidation with intercompany matching against the counterparty ledger, FX revaluation recomputed from balances instead of quarantined, and an evaluation set of seeded-defect TBs so every change is regression-tested. The optional LLM layer (plain-English explanations, suggested account fixes) would go in behind that, read-only with respect to decisions.
+
+Where the prototype breaks at scale
+It validates entries in memory against dictionaries, which is fine for thousands of entries but has no concurrency, no shared state across batches (duplicate detection only covers one batch), and no database. COA with thousands of accounts is fine for lookups, but the rules are flat: real COAs differ per entity, so rules need per-entity configuration. Multi-entity consolidation needs intercompany matching and elimination, which a per-entry validator cannot do. The FX handling only checks rate availability and does not translate amounts.
+
+How I used AI tools
+I used Claude Code to read the PDF and data, draft the module layout, write the validator and the tests, and run them. It helped most with the breadth of edge cases (NaN, bool amounts, malformed entries) and with generating the tests quickly. It also made mistakes I caught by running the code: the first data-quality report listed nearly every header account as childless because pandas read parent_code as a float, and a shell heredoc failed silently on the first attempt. I decided the accounting policy myself: REJECT versus QUARANTINE boundaries, and not inventing an FX revaluation formula.
+
+What I underestimated
+The number of judgment calls hiding inside "validate an entry": is a TBD cash-flow category a reject or a human question; is the same account on both sides always an error; what base does an FX revaluation use. Each needs an accountant's answer, and in a real project I would have used the pre-start questions on these. I also underestimated how much of the value is in the explanation: a bare "invalid" is useless to a finance user, but "debits 28,500 vs credits 25,000, difference 3,500" is actionable.
+
+One thing I think the problem underestimates
+Trust. Statements are only usable if a controller can sign off on them, which means every number must be traceable and every automated decision must be reproducible and overridable by a person. The hard part is not computing the numbers, it is building a system where no one has to take the AI's word for them.

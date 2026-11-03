@@ -1,0 +1,81 @@
+entry_id,input_index,check,status,message,decision
+JE-001,0,required_fields,PASS,All header fields present.,ACCEPT
+JE-001,0,period,PASS,Date 2024-12-31 is within 2024-Q4.,ACCEPT
+JE-001,0,amounts,PASS,All line amounts are valid positive numbers.,ACCEPT
+JE-001,0,balance,PASS,"Debits equal credits (850,000.00).",ACCEPT
+JE-001,0,circular,PASS,No account is both debited and credited.,ACCEPT
+JE-001,0,accounts,PASS,"All accounts exist, are postable and fully mapped.",ACCEPT
+JE-001,0,fx,PASS,No FX translation or revaluation required.,ACCEPT
+JE-001,0,duplicate,PASS,Not a duplicate.,ACCEPT
+JE-002,1,required_fields,PASS,All header fields present.,REJECT
+JE-002,1,period,PASS,Date 2024-12-28 is within 2024-Q4.,REJECT
+JE-002,1,amounts,PASS,All line amounts are valid positive numbers.,REJECT
+JE-002,1,balance,REJECT,"Debits (28,500.00) do not equal credits (25,000.00); difference 3,500.00. Correct the amounts so total debits equal total credits.",REJECT
+JE-002,1,circular,PASS,No account is both debited and credited.,REJECT
+JE-002,1,accounts,PASS,"All accounts exist, are postable and fully mapped.",REJECT
+JE-002,1,fx,PASS,No FX translation or revaluation required.,REJECT
+JE-002,1,duplicate,PASS,Not a duplicate.,REJECT
+JE-003,2,required_fields,PASS,All header fields present.,QUARANTINE
+JE-003,2,period,PASS,Date 2024-12-31 is within 2024-Q4.,QUARANTINE
+JE-003,2,amounts,PASS,All line amounts are valid positive numbers.,QUARANTINE
+JE-003,2,balance,PASS,"Debits equal credits (11,200.00).",QUARANTINE
+JE-003,2,circular,PASS,No account is both debited and credited.,QUARANTINE
+JE-003,2,accounts,PASS,"All accounts exist, are postable and fully mapped.",QUARANTINE
+JE-003,2,fx_revaluation,QUARANTINE,"Entry posts to FX gain/loss account(s) ['7310']; the amount cannot be reproduced from the supplied inputs, so a person must verify the revaluation. Note: no period_end rate is available for ['GBP'].",QUARANTINE
+JE-003,2,duplicate,PASS,Not a duplicate.,QUARANTINE
+JE-004,3,required_fields,PASS,All header fields present.,ACCEPT
+JE-004,3,period,PASS,Date 2024-12-31 is within 2024-Q4.,ACCEPT
+JE-004,3,amounts,PASS,All line amounts are valid positive numbers.,ACCEPT
+JE-004,3,balance,PASS,"Debits equal credits (45,000.00).",ACCEPT
+JE-004,3,circular,PASS,No account is both debited and credited.,ACCEPT
+JE-004,3,accounts,PASS,"All accounts exist, are postable and fully mapped.",ACCEPT
+JE-004,3,fx,PASS,No FX translation or revaluation required.,ACCEPT
+JE-004,3,duplicate,PASS,Not a duplicate.,ACCEPT
+JE-005,4,required_fields,PASS,All header fields present.,REJECT
+JE-005,4,period,PASS,Date 2024-12-15 is within 2024-Q4.,REJECT
+JE-005,4,amounts,PASS,All line amounts are valid positive numbers.,REJECT
+JE-005,4,balance,PASS,"Debits equal credits (18,500.00).",REJECT
+JE-005,4,circular,PASS,No account is both debited and credited.,REJECT
+JE-005,4,account_exists,REJECT,Account(s) ['6315'] are not in the chart of accounts. Map to a valid account (or add it to the COA) and resubmit.,REJECT
+JE-005,4,fx,PASS,No FX translation or revaluation required.,REJECT
+JE-005,4,duplicate,PASS,Not a duplicate.,REJECT
+JE-006,5,required_fields,PASS,All header fields present.,ACCEPT
+JE-006,5,period,PASS,Date 2024-12-31 is within 2024-Q4.,ACCEPT
+JE-006,5,amounts,PASS,All line amounts are valid positive numbers.,ACCEPT
+JE-006,5,balance,PASS,"Debits equal credits (215,000.00).",ACCEPT
+JE-006,5,circular,PASS,No account is both debited and credited.,ACCEPT
+JE-006,5,accounts,PASS,"All accounts exist, are postable and fully mapped.",ACCEPT
+JE-006,5,fx,PASS,No FX translation or revaluation required.,ACCEPT
+JE-006,5,duplicate,PASS,Not a duplicate.,ACCEPT
+JE-007,6,required_fields,PASS,All header fields present.,ACCEPT
+JE-007,6,period,PASS,Date 2024-12-31 is within 2024-Q4.,ACCEPT
+JE-007,6,amounts,PASS,All line amounts are valid positive numbers.,ACCEPT
+JE-007,6,balance,PASS,"Debits equal credits (38,000.00).",ACCEPT
+JE-007,6,circular,PASS,No account is both debited and credited.,ACCEPT
+JE-007,6,accounts,PASS,"All accounts exist, are postable and fully mapped.",ACCEPT
+JE-007,6,fx,PASS,No FX translation or revaluation required.,ACCEPT
+JE-007,6,duplicate,PASS,Not a duplicate.,ACCEPT
+JE-008,7,required_fields,PASS,All header fields present.,REJECT
+JE-008,7,period,PASS,Date 2024-12-30 is within 2024-Q4.,REJECT
+JE-008,7,amounts,PASS,All line amounts are valid positive numbers.,REJECT
+JE-008,7,balance,PASS,"Debits equal credits (320,000.00).",REJECT
+JE-008,7,circular,REJECT,Account(s) ['2170'] appear on both the debit and credit side; the entry nets to zero effect on them (circular/self-offsetting).,REJECT
+JE-008,7,account_mapping,QUARANTINE,Account(s) ['2170 (Intercompany Payable)'] have an unresolved cash-flow category ('TBD') in the COA; a human must confirm the classification.,REJECT
+JE-008,7,fx,PASS,No FX translation or revaluation required.,REJECT
+JE-008,7,duplicate,PASS,Not a duplicate.,REJECT
+JE-009,8,required_fields,PASS,All header fields present.,ACCEPT
+JE-009,8,period,PASS,Date 2024-12-31 is within 2024-Q4.,ACCEPT
+JE-009,8,amounts,PASS,All line amounts are valid positive numbers.,ACCEPT
+JE-009,8,balance,PASS,"Debits equal credits (75,000.00).",ACCEPT
+JE-009,8,circular,PASS,No account is both debited and credited.,ACCEPT
+JE-009,8,accounts,PASS,"All accounts exist, are postable and fully mapped.",ACCEPT
+JE-009,8,fx,PASS,No FX translation or revaluation required.,ACCEPT
+JE-009,8,duplicate,PASS,Not a duplicate.,ACCEPT
+JE-010,9,required_fields,PASS,All header fields present.,ACCEPT
+JE-010,9,period,PASS,Date 2024-12-31 is within 2024-Q4.,ACCEPT
+JE-010,9,amounts,PASS,All line amounts are valid positive numbers.,ACCEPT
+JE-010,9,balance,PASS,"Debits equal credits (200,000.00).",ACCEPT
+JE-010,9,circular,PASS,No account is both debited and credited.,ACCEPT
+JE-010,9,accounts,PASS,"All accounts exist, are postable and fully mapped.",ACCEPT
+JE-010,9,fx,PASS,No FX translation or revaluation required.,ACCEPT
+JE-010,9,duplicate,PASS,Not a duplicate.,ACCEPT

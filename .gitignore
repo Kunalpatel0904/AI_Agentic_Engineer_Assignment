@@ -1,0 +1,22 @@
+﻿.venv/
+venv/
+env/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+.env.*
+*.key
+*.pem
+credentials*.json
+secrets*
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log.tmp
+
+# Assignment brief (not for redistribution)
+AI_Agentic_Engineer_Assignment.pdf

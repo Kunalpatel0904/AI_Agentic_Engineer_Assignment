@@ -1,0 +1,872 @@
+[
+  {
+    "seq": 1,
+    "ts": "2026-11-03T09:41:12.169753+00:00",
+    "entry_id": "JE-001",
+    "event": "received",
+    "index": 0
+  },
+  {
+    "seq": 2,
+    "ts": "2026-11-03T09:41:12.171061+00:00",
+    "entry_id": "JE-001",
+    "event": "check",
+    "check": "required_fields",
+    "status": "PASS",
+    "message": "All header fields present."
+  },
+  {
+    "seq": 3,
+    "ts": "2026-11-03T09:41:12.171173+00:00",
+    "entry_id": "JE-001",
+    "event": "check",
+    "check": "period",
+    "status": "PASS",
+    "message": "Date 2024-12-31 is within 2024-Q4."
+  },
+  {
+    "seq": 4,
+    "ts": "2026-11-03T09:41:12.171245+00:00",
+    "entry_id": "JE-001",
+    "event": "check",
+    "check": "amounts",
+    "status": "PASS",
+    "message": "All line amounts are valid positive numbers."
+  },
+  {
+    "seq": 5,
+    "ts": "2026-11-03T09:41:12.171291+00:00",
+    "entry_id": "JE-001",
+    "event": "check",
+    "check": "balance",
+    "status": "PASS",
+    "message": "Debits equal credits (850,000.00)."
+  },
+  {
+    "seq": 6,
+    "ts": "2026-11-03T09:41:12.171333+00:00",
+    "entry_id": "JE-001",
+    "event": "check",
+    "check": "circular",
+    "status": "PASS",
+    "message": "No account is both debited and credited."
+  },
+  {
+    "seq": 7,
+    "ts": "2026-11-03T09:41:12.171372+00:00",
+    "entry_id": "JE-001",
+    "event": "check",
+    "check": "accounts",
+    "status": "PASS",
+    "message": "All accounts exist, are postable and fully mapped."
+  },
+  {
+    "seq": 8,
+    "ts": "2026-11-03T09:41:12.171414+00:00",
+    "entry_id": "JE-001",
+    "event": "check",
+    "check": "fx",
+    "status": "PASS",
+    "message": "No FX translation or revaluation required."
+  },
+  {
+    "seq": 9,
+    "ts": "2026-11-03T09:41:12.171452+00:00",
+    "entry_id": "JE-001",
+    "event": "check",
+    "check": "duplicate",
+    "status": "PASS",
+    "message": "Not a duplicate."
+  },
+  {
+    "seq": 10,
+    "ts": "2026-11-03T09:41:12.171488+00:00",
+    "entry_id": "JE-001",
+    "event": "decision",
+    "decision": "ACCEPT",
+    "explanation": "Accepted: all mandatory validations passed."
+  },
+  {
+    "seq": 11,
+    "ts": "2026-11-03T09:41:12.171528+00:00",
+    "entry_id": "JE-002",
+    "event": "received",
+    "index": 1
+  },
+  {
+    "seq": 12,
+    "ts": "2026-11-03T09:41:12.171614+00:00",
+    "entry_id": "JE-002",
+    "event": "check",
+    "check": "required_fields",
+    "status": "PASS",
+    "message": "All header fields present."
+  },
+  {
+    "seq": 13,
+    "ts": "2026-11-03T09:41:12.171659+00:00",
+    "entry_id": "JE-002",
+    "event": "check",
+    "check": "period",
+    "status": "PASS",
+    "message": "Date 2024-12-28 is within 2024-Q4."
+  },
+  {
+    "seq": 14,
+    "ts": "2026-11-03T09:41:12.171693+00:00",
+    "entry_id": "JE-002",
+    "event": "check",
+    "check": "amounts",
+    "status": "PASS",
+    "message": "All line amounts are valid positive numbers."
+  },
+  {
+    "seq": 15,
+    "ts": "2026-11-03T09:41:12.171723+00:00",
+    "entry_id": "JE-002",
+    "event": "check",
+    "check": "balance",
+    "status": "REJECT",
+    "message": "Debits (28,500.00) do not equal credits (25,000.00); difference 3,500.00. Correct the amounts so total debits equal total credits."
+  },
+  {
+    "seq": 16,
+    "ts": "2026-11-03T09:41:12.171751+00:00",
+    "entry_id": "JE-002",
+    "event": "check",
+    "check": "circular",
+    "status": "PASS",
+    "message": "No account is both debited and credited."
+  },
+  {
+    "seq": 17,
+    "ts": "2026-11-03T09:41:12.171782+00:00",
+    "entry_id": "JE-002",
+    "event": "check",
+    "check": "accounts",
+    "status": "PASS",
+    "message": "All accounts exist, are postable and fully mapped."
+  },
+  {
+    "seq": 18,
+    "ts": "2026-11-03T09:41:12.171810+00:00",
+    "entry_id": "JE-002",
+    "event": "check",
+    "check": "fx",
+    "status": "PASS",
+    "message": "No FX translation or revaluation required."
+  },
+  {
+    "seq": 19,
+    "ts": "2026-11-03T09:41:12.171837+00:00",
+    "entry_id": "JE-002",
+    "event": "check",
+    "check": "duplicate",
+    "status": "PASS",
+    "message": "Not a duplicate."
+  },
+  {
+    "seq": 20,
+    "ts": "2026-11-03T09:41:12.171864+00:00",
+    "entry_id": "JE-002",
+    "event": "decision",
+    "decision": "REJECT",
+    "explanation": "Rejected: Debits (28,500.00) do not equal credits (25,000.00); difference 3,500.00. Correct the amounts so total debits equal total credits."
+  },
+  {
+    "seq": 21,
+    "ts": "2026-11-03T09:41:12.171895+00:00",
+    "entry_id": "JE-003",
+    "event": "received",
+    "index": 2
+  },
+  {
+    "seq": 22,
+    "ts": "2026-11-03T09:41:12.171976+00:00",
+    "entry_id": "JE-003",
+    "event": "check",
+    "check": "required_fields",
+    "status": "PASS",
+    "message": "All header fields present."
+  },
+  {
+    "seq": 23,
+    "ts": "2026-11-03T09:41:12.172015+00:00",
+    "entry_id": "JE-003",
+    "event": "check",
+    "check": "period",
+    "status": "PASS",
+    "message": "Date 2024-12-31 is within 2024-Q4."
+  },
+  {
+    "seq": 24,
+    "ts": "2026-11-03T09:41:12.172047+00:00",
+    "entry_id": "JE-003",
+    "event": "check",
+    "check": "amounts",
+    "status": "PASS",
+    "message": "All line amounts are valid positive numbers."
+  },
+  {
+    "seq": 25,
+    "ts": "2026-11-03T09:41:12.172075+00:00",
+    "entry_id": "JE-003",
+    "event": "check",
+    "check": "balance",
+    "status": "PASS",
+    "message": "Debits equal credits (11,200.00)."
+  },
+  {
+    "seq": 26,
+    "ts": "2026-11-03T09:41:12.172103+00:00",
+    "entry_id": "JE-003",
+    "event": "check",
+    "check": "circular",
+    "status": "PASS",
+    "message": "No account is both debited and credited."
+  },
+  {
+    "seq": 27,
+    "ts": "2026-11-03T09:41:12.172135+00:00",
+    "entry_id": "JE-003",
+    "event": "check",
+    "check": "accounts",
+    "status": "PASS",
+    "message": "All accounts exist, are postable and fully mapped."
+  },
+  {
+    "seq": 28,
+    "ts": "2026-11-03T09:41:12.172164+00:00",
+    "entry_id": "JE-003",
+    "event": "check",
+    "check": "fx_revaluation",
+    "status": "QUARANTINE",
+    "message": "Entry posts to FX gain/loss account(s) ['7310']; the amount cannot be reproduced from the supplied inputs, so a person must verify the revaluation. Note: no period_end rate is available for ['GBP']."
+  },
+  {
+    "seq": 29,
+    "ts": "2026-11-03T09:41:12.172194+00:00",
+    "entry_id": "JE-003",
+    "event": "check",
+    "check": "duplicate",
+    "status": "PASS",
+    "message": "Not a duplicate."
+  },
+  {
+    "seq": 30,
+    "ts": "2026-11-03T09:41:12.172222+00:00",
+    "entry_id": "JE-003",
+    "event": "decision",
+    "decision": "QUARANTINE",
+    "explanation": "Sent to human review: Entry posts to FX gain/loss account(s) ['7310']; the amount cannot be reproduced from the supplied inputs, so a person must verify the revaluation. Note: no period_end rate is available for ['GBP']."
+  },
+  {
+    "seq": 31,
+    "ts": "2026-11-03T09:41:12.172281+00:00",
+    "entry_id": "JE-004",
+    "event": "received",
+    "index": 3
+  },
+  {
+    "seq": 32,
+    "ts": "2026-11-03T09:41:12.172361+00:00",
+    "entry_id": "JE-004",
+    "event": "check",
+    "check": "required_fields",
+    "status": "PASS",
+    "message": "All header fields present."
+  },
+  {
+    "seq": 33,
+    "ts": "2026-11-03T09:41:12.172398+00:00",
+    "entry_id": "JE-004",
+    "event": "check",
+    "check": "period",
+    "status": "PASS",
+    "message": "Date 2024-12-31 is within 2024-Q4."
+  },
+  {
+    "seq": 34,
+    "ts": "2026-11-03T09:41:12.172429+00:00",
+    "entry_id": "JE-004",
+    "event": "check",
+    "check": "amounts",
+    "status": "PASS",
+    "message": "All line amounts are valid positive numbers."
+  },
+  {
+    "seq": 35,
+    "ts": "2026-11-03T09:41:12.172457+00:00",
+    "entry_id": "JE-004",
+    "event": "check",
+    "check": "balance",
+    "status": "PASS",
+    "message": "Debits equal credits (45,000.00)."
+  },
+  {
+    "seq": 36,
+    "ts": "2026-11-03T09:41:12.172485+00:00",
+    "entry_id": "JE-004",
+    "event": "check",
+    "check": "circular",
+    "status": "PASS",
+    "message": "No account is both debited and credited."
+  },
+  {
+    "seq": 37,
+    "ts": "2026-11-03T09:41:12.172512+00:00",
+    "entry_id": "JE-004",
+    "event": "check",
+    "check": "accounts",
+    "status": "PASS",
+    "message": "All accounts exist, are postable and fully mapped."
+  },
+  {
+    "seq": 38,
+    "ts": "2026-11-03T09:41:12.172538+00:00",
+    "entry_id": "JE-004",
+    "event": "check",
+    "check": "fx",
+    "status": "PASS",
+    "message": "No FX translation or revaluation required."
+  },
+  {
+    "seq": 39,
+    "ts": "2026-11-03T09:41:12.172565+00:00",
+    "entry_id": "JE-004",
+    "event": "check",
+    "check": "duplicate",
+    "status": "PASS",
+    "message": "Not a duplicate."
+  },
+  {
+    "seq": 40,
+    "ts": "2026-11-03T09:41:12.172591+00:00",
+    "entry_id": "JE-004",
+    "event": "decision",
+    "decision": "ACCEPT",
+    "explanation": "Accepted: all mandatory validations passed."
+  },
+  {
+    "seq": 41,
+    "ts": "2026-11-03T09:41:12.172626+00:00",
+    "entry_id": "JE-005",
+    "event": "received",
+    "index": 4
+  },
+  {
+    "seq": 42,
+    "ts": "2026-11-03T09:41:12.172693+00:00",
+    "entry_id": "JE-005",
+    "event": "check",
+    "check": "required_fields",
+    "status": "PASS",
+    "message": "All header fields present."
+  },
+  {
+    "seq": 43,
+    "ts": "2026-11-03T09:41:12.172729+00:00",
+    "entry_id": "JE-005",
+    "event": "check",
+    "check": "period",
+    "status": "PASS",
+    "message": "Date 2024-12-15 is within 2024-Q4."
+  },
+  {
+    "seq": 44,
+    "ts": "2026-11-03T09:41:12.172770+00:00",
+    "entry_id": "JE-005",
+    "event": "check",
+    "check": "amounts",
+    "status": "PASS",
+    "message": "All line amounts are valid positive numbers."
+  },
+  {
+    "seq": 45,
+    "ts": "2026-11-03T09:41:12.172798+00:00",
+    "entry_id": "JE-005",
+    "event": "check",
+    "check": "balance",
+    "status": "PASS",
+    "message": "Debits equal credits (18,500.00)."
+  },
+  {
+    "seq": 46,
+    "ts": "2026-11-03T09:41:12.172829+00:00",
+    "entry_id": "JE-005",
+    "event": "check",
+    "check": "circular",
+    "status": "PASS",
+    "message": "No account is both debited and credited."
+  },
+  {
+    "seq": 47,
+    "ts": "2026-11-03T09:41:12.172856+00:00",
+    "entry_id": "JE-005",
+    "event": "check",
+    "check": "account_exists",
+    "status": "REJECT",
+    "message": "Account(s) ['6315'] are not in the chart of accounts. Map to a valid account (or add it to the COA) and resubmit."
+  },
+  {
+    "seq": 48,
+    "ts": "2026-11-03T09:41:12.172884+00:00",
+    "entry_id": "JE-005",
+    "event": "check",
+    "check": "fx",
+    "status": "PASS",
+    "message": "No FX translation or revaluation required."
+  },
+  {
+    "seq": 49,
+    "ts": "2026-11-03T09:41:12.172910+00:00",
+    "entry_id": "JE-005",
+    "event": "check",
+    "check": "duplicate",
+    "status": "PASS",
+    "message": "Not a duplicate."
+  },
+  {
+    "seq": 50,
+    "ts": "2026-11-03T09:41:12.172935+00:00",
+    "entry_id": "JE-005",
+    "event": "decision",
+    "decision": "REJECT",
+    "explanation": "Rejected: Account(s) ['6315'] are not in the chart of accounts. Map to a valid account (or add it to the COA) and resubmit."
+  },
+  {
+    "seq": 51,
+    "ts": "2026-11-03T09:41:12.172964+00:00",
+    "entry_id": "JE-006",
+    "event": "received",
+    "index": 5
+  },
+  {
+    "seq": 52,
+    "ts": "2026-11-03T09:41:12.173025+00:00",
+    "entry_id": "JE-006",
+    "event": "check",
+    "check": "required_fields",
+    "status": "PASS",
+    "message": "All header fields present."
+  },
+  {
+    "seq": 53,
+    "ts": "2026-11-03T09:41:12.173059+00:00",
+    "entry_id": "JE-006",
+    "event": "check",
+    "check": "period",
+    "status": "PASS",
+    "message": "Date 2024-12-31 is within 2024-Q4."
+  },
+  {
+    "seq": 54,
+    "ts": "2026-11-03T09:41:12.173088+00:00",
+    "entry_id": "JE-006",
+    "event": "check",
+    "check": "amounts",
+    "status": "PASS",
+    "message": "All line amounts are valid positive numbers."
+  },
+  {
+    "seq": 55,
+    "ts": "2026-11-03T09:41:12.173118+00:00",
+    "entry_id": "JE-006",
+    "event": "check",
+    "check": "balance",
+    "status": "PASS",
+    "message": "Debits equal credits (215,000.00)."
+  },
+  {
+    "seq": 56,
+    "ts": "2026-11-03T09:41:12.173146+00:00",
+    "entry_id": "JE-006",
+    "event": "check",
+    "check": "circular",
+    "status": "PASS",
+    "message": "No account is both debited and credited."
+  },
+  {
+    "seq": 57,
+    "ts": "2026-11-03T09:41:12.173173+00:00",
+    "entry_id": "JE-006",
+    "event": "check",
+    "check": "accounts",
+    "status": "PASS",
+    "message": "All accounts exist, are postable and fully mapped."
+  },
+  {
+    "seq": 58,
+    "ts": "2026-11-03T09:41:12.173200+00:00",
+    "entry_id": "JE-006",
+    "event": "check",
+    "check": "fx",
+    "status": "PASS",
+    "message": "No FX translation or revaluation required."
+  },
+  {
+    "seq": 59,
+    "ts": "2026-11-03T09:41:12.173228+00:00",
+    "entry_id": "JE-006",
+    "event": "check",
+    "check": "duplicate",
+    "status": "PASS",
+    "message": "Not a duplicate."
+  },
+  {
+    "seq": 60,
+    "ts": "2026-11-03T09:41:12.173256+00:00",
+    "entry_id": "JE-006",
+    "event": "decision",
+    "decision": "ACCEPT",
+    "explanation": "Accepted: all mandatory validations passed."
+  },
+  {
+    "seq": 61,
+    "ts": "2026-11-03T09:41:12.173291+00:00",
+    "entry_id": "JE-007",
+    "event": "received",
+    "index": 6
+  },
+  {
+    "seq": 62,
+    "ts": "2026-11-03T09:41:12.173354+00:00",
+    "entry_id": "JE-007",
+    "event": "check",
+    "check": "required_fields",
+    "status": "PASS",
+    "message": "All header fields present."
+  },
+  {
+    "seq": 63,
+    "ts": "2026-11-03T09:41:12.173390+00:00",
+    "entry_id": "JE-007",
+    "event": "check",
+    "check": "period",
+    "status": "PASS",
+    "message": "Date 2024-12-31 is within 2024-Q4."
+  },
+  {
+    "seq": 64,
+    "ts": "2026-11-03T09:41:12.173419+00:00",
+    "entry_id": "JE-007",
+    "event": "check",
+    "check": "amounts",
+    "status": "PASS",
+    "message": "All line amounts are valid positive numbers."
+  },
+  {
+    "seq": 65,
+    "ts": "2026-11-03T09:41:12.173451+00:00",
+    "entry_id": "JE-007",
+    "event": "check",
+    "check": "balance",
+    "status": "PASS",
+    "message": "Debits equal credits (38,000.00)."
+  },
+  {
+    "seq": 66,
+    "ts": "2026-11-03T09:41:12.173479+00:00",
+    "entry_id": "JE-007",
+    "event": "check",
+    "check": "circular",
+    "status": "PASS",
+    "message": "No account is both debited and credited."
+  },
+  {
+    "seq": 67,
+    "ts": "2026-11-03T09:41:12.173505+00:00",
+    "entry_id": "JE-007",
+    "event": "check",
+    "check": "accounts",
+    "status": "PASS",
+    "message": "All accounts exist, are postable and fully mapped."
+  },
+  {
+    "seq": 68,
+    "ts": "2026-11-03T09:41:12.173531+00:00",
+    "entry_id": "JE-007",
+    "event": "check",
+    "check": "fx",
+    "status": "PASS",
+    "message": "No FX translation or revaluation required."
+  },
+  {
+    "seq": 69,
+    "ts": "2026-11-03T09:41:12.173557+00:00",
+    "entry_id": "JE-007",
+    "event": "check",
+    "check": "duplicate",
+    "status": "PASS",
+    "message": "Not a duplicate."
+  },
+  {
+    "seq": 70,
+    "ts": "2026-11-03T09:41:12.173583+00:00",
+    "entry_id": "JE-007",
+    "event": "decision",
+    "decision": "ACCEPT",
+    "explanation": "Accepted: all mandatory validations passed."
+  },
+  {
+    "seq": 71,
+    "ts": "2026-11-03T09:41:12.173612+00:00",
+    "entry_id": "JE-008",
+    "event": "received",
+    "index": 7
+  },
+  {
+    "seq": 72,
+    "ts": "2026-11-03T09:41:12.173685+00:00",
+    "entry_id": "JE-008",
+    "event": "check",
+    "check": "required_fields",
+    "status": "PASS",
+    "message": "All header fields present."
+  },
+  {
+    "seq": 73,
+    "ts": "2026-11-03T09:41:12.173721+00:00",
+    "entry_id": "JE-008",
+    "event": "check",
+    "check": "period",
+    "status": "PASS",
+    "message": "Date 2024-12-30 is within 2024-Q4."
+  },
+  {
+    "seq": 74,
+    "ts": "2026-11-03T09:41:12.173750+00:00",
+    "entry_id": "JE-008",
+    "event": "check",
+    "check": "amounts",
+    "status": "PASS",
+    "message": "All line amounts are valid positive numbers."
+  },
+  {
+    "seq": 75,
+    "ts": "2026-11-03T09:41:12.173777+00:00",
+    "entry_id": "JE-008",
+    "event": "check",
+    "check": "balance",
+    "status": "PASS",
+    "message": "Debits equal credits (320,000.00)."
+  },
+  {
+    "seq": 76,
+    "ts": "2026-11-03T09:41:12.173804+00:00",
+    "entry_id": "JE-008",
+    "event": "check",
+    "check": "circular",
+    "status": "REJECT",
+    "message": "Account(s) ['2170'] appear on both the debit and credit side; the entry nets to zero effect on them (circular/self-offsetting)."
+  },
+  {
+    "seq": 77,
+    "ts": "2026-11-03T09:41:12.173831+00:00",
+    "entry_id": "JE-008",
+    "event": "check",
+    "check": "account_mapping",
+    "status": "QUARANTINE",
+    "message": "Account(s) ['2170 (Intercompany Payable)'] have an unresolved cash-flow category ('TBD') in the COA; a human must confirm the classification."
+  },
+  {
+    "seq": 78,
+    "ts": "2026-11-03T09:41:12.173859+00:00",
+    "entry_id": "JE-008",
+    "event": "check",
+    "check": "fx",
+    "status": "PASS",
+    "message": "No FX translation or revaluation required."
+  },
+  {
+    "seq": 79,
+    "ts": "2026-11-03T09:41:12.173885+00:00",
+    "entry_id": "JE-008",
+    "event": "check",
+    "check": "duplicate",
+    "status": "PASS",
+    "message": "Not a duplicate."
+  },
+  {
+    "seq": 80,
+    "ts": "2026-11-03T09:41:12.173911+00:00",
+    "entry_id": "JE-008",
+    "event": "decision",
+    "decision": "REJECT",
+    "explanation": "Rejected: Account(s) ['2170'] appear on both the debit and credit side; the entry nets to zero effect on them (circular/self-offsetting). Additionally needs review: Account(s) ['2170 (Intercompany Payable)'] have an unresolved cash-flow category ('TBD') in the COA; a human must confirm the classification."
+  },
+  {
+    "seq": 81,
+    "ts": "2026-11-03T09:41:12.173944+00:00",
+    "entry_id": "JE-009",
+    "event": "received",
+    "index": 8
+  },
+  {
+    "seq": 82,
+    "ts": "2026-11-03T09:41:12.174007+00:00",
+    "entry_id": "JE-009",
+    "event": "check",
+    "check": "required_fields",
+    "status": "PASS",
+    "message": "All header fields present."
+  },
+  {
+    "seq": 83,
+    "ts": "2026-11-03T09:41:12.174041+00:00",
+    "entry_id": "JE-009",
+    "event": "check",
+    "check": "period",
+    "status": "PASS",
+    "message": "Date 2024-12-31 is within 2024-Q4."
+  },
+  {
+    "seq": 84,
+    "ts": "2026-11-03T09:41:12.174074+00:00",
+    "entry_id": "JE-009",
+    "event": "check",
+    "check": "amounts",
+    "status": "PASS",
+    "message": "All line amounts are valid positive numbers."
+  },
+  {
+    "seq": 85,
+    "ts": "2026-11-03T09:41:12.174101+00:00",
+    "entry_id": "JE-009",
+    "event": "check",
+    "check": "balance",
+    "status": "PASS",
+    "message": "Debits equal credits (75,000.00)."
+  },
+  {
+    "seq": 86,
+    "ts": "2026-11-03T09:41:12.174128+00:00",
+    "entry_id": "JE-009",
+    "event": "check",
+    "check": "circular",
+    "status": "PASS",
+    "message": "No account is both debited and credited."
+  },
+  {
+    "seq": 87,
+    "ts": "2026-11-03T09:41:12.174154+00:00",
+    "entry_id": "JE-009",
+    "event": "check",
+    "check": "accounts",
+    "status": "PASS",
+    "message": "All accounts exist, are postable and fully mapped."
+  },
+  {
+    "seq": 88,
+    "ts": "2026-11-03T09:41:12.174181+00:00",
+    "entry_id": "JE-009",
+    "event": "check",
+    "check": "fx",
+    "status": "PASS",
+    "message": "No FX translation or revaluation required."
+  },
+  {
+    "seq": 89,
+    "ts": "2026-11-03T09:41:12.174207+00:00",
+    "entry_id": "JE-009",
+    "event": "check",
+    "check": "duplicate",
+    "status": "PASS",
+    "message": "Not a duplicate."
+  },
+  {
+    "seq": 90,
+    "ts": "2026-11-03T09:41:12.174235+00:00",
+    "entry_id": "JE-009",
+    "event": "decision",
+    "decision": "ACCEPT",
+    "explanation": "Accepted: all mandatory validations passed."
+  },
+  {
+    "seq": 91,
+    "ts": "2026-11-03T09:41:12.174266+00:00",
+    "entry_id": "JE-010",
+    "event": "received",
+    "index": 9
+  },
+  {
+    "seq": 92,
+    "ts": "2026-11-03T09:41:12.174325+00:00",
+    "entry_id": "JE-010",
+    "event": "check",
+    "check": "required_fields",
+    "status": "PASS",
+    "message": "All header fields present."
+  },
+  {
+    "seq": 93,
+    "ts": "2026-11-03T09:41:12.174358+00:00",
+    "entry_id": "JE-010",
+    "event": "check",
+    "check": "period",
+    "status": "PASS",
+    "message": "Date 2024-12-31 is within 2024-Q4."
+  },
+  {
+    "seq": 94,
+    "ts": "2026-11-03T09:41:12.174388+00:00",
+    "entry_id": "JE-010",
+    "event": "check",
+    "check": "amounts",
+    "status": "PASS",
+    "message": "All line amounts are valid positive numbers."
+  },
+  {
+    "seq": 95,
+    "ts": "2026-11-03T09:41:12.174414+00:00",
+    "entry_id": "JE-010",
+    "event": "check",
+    "check": "balance",
+    "status": "PASS",
+    "message": "Debits equal credits (200,000.00)."
+  },
+  {
+    "seq": 96,
+    "ts": "2026-11-03T09:41:12.174441+00:00",
+    "entry_id": "JE-010",
+    "event": "check",
+    "check": "circular",
+    "status": "PASS",
+    "message": "No account is both debited and credited."
+  },
+  {
+    "seq": 97,
+    "ts": "2026-11-03T09:41:12.174467+00:00",
+    "entry_id": "JE-010",
+    "event": "check",
+    "check": "accounts",
+    "status": "PASS",
+    "message": "All accounts exist, are postable and fully mapped."
+  },
+  {
+    "seq": 98,
+    "ts": "2026-11-03T09:41:12.174493+00:00",
+    "entry_id": "JE-010",
+    "event": "check",
+    "check": "fx",
+    "status": "PASS",
+    "message": "No FX translation or revaluation required."
+  },
+  {
+    "seq": 99,
+    "ts": "2026-11-03T09:41:12.174518+00:00",
+    "entry_id": "JE-010",
+    "event": "check",
+    "check": "duplicate",
+    "status": "PASS",
+    "message": "Not a duplicate."
+  },
+  {
+    "seq": 100,
+    "ts": "2026-11-03T09:41:12.174544+00:00",
+    "entry_id": "JE-010",
+    "event": "decision",
+    "decision": "ACCEPT",
+    "explanation": "Accepted: all mandatory validations passed."
+  }
+]
